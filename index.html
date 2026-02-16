@@ -55,19 +55,25 @@
                 </button>
             </div>
         </div>
+<div id="game-screen" class="screen">
+    <div class="header-game">
+        <span id="question-counter">Câu: 1/15</span>
+        <span id="score">Điểm: 0</span>
+    </div>
+    <div class="progress-bar">
+        <div id="progress" class="progress"></div>
+    </div>
+    
+    <div style="text-align: right; margin-bottom: 10px;">
+        <button id="btn-hint" class="btn-hint" onclick="useHint()">
+            <i class="fas fa-lightbulb"></i> Gợi ý (<span id="hint-count">3</span>)
+        </button>
+    </div>
 
-        <div id="game-screen" class="screen">
-            <div class="header-game">
-                <span id="question-counter">Câu: 1/10</span>
-                <span id="score">Điểm: 0</span>
-            </div>
-            <div class="progress-bar">
-                <div id="progress" class="progress"></div>
-            </div>
-            <h2 id="question-text">Câu hỏi sẽ hiện ở đây?</h2>
-            <div class="answers-container" id="answers-container">
-                </div>
+    <h2 id="question-text">Câu hỏi sẽ hiện ở đây?</h2>
+    <div class="answers-container" id="answers-container">
         </div>
+</div>
 
         <div id="result-screen" class="screen">
             <i class="fas fa-trophy" style="font-size: 50px; color: gold; margin-bottom: 20px;"></i>

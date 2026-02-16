@@ -1,4 +1,4 @@
-// --- DỮ LIỆU CÂU HỎI (100 CÂU) ---
+// --- DỮ LIỆU CÂU HỎI (150 CÂU) ---
 const quizData = {
     music: [
         { question: "Ai là 'Ông hoàng nhạc Pop'?", answers: ["Elvis Presley", "Michael Jackson", "Justin Bieber", "Bruno Mars"], correct: 1 },
@@ -10,7 +10,12 @@ const quizData = {
         { question: "Dòng nhạc Jazz bắt nguồn từ đâu?", answers: ["Anh", "Mỹ", "Pháp", "Đức"], correct: 1 },
         { question: "Nốt 'Đồ' ký hiệu là chữ cái gì?", answers: ["C", "D", "E", "F"], correct: 0 },
         { question: "Beethoven là người nước nào?", answers: ["Pháp", "Đức", "Anh", "Ý"], correct: 1 },
-        { question: "BTS là nhóm nhạc nước nào?", answers: ["Nhật", "Trung", "Hàn Quốc", "Thái"], correct: 2 }
+        { question: "BTS là nhóm nhạc nước nào?", answers: ["Nhật", "Trung", "Hàn Quốc", "Thái"], correct: 2 },
+        { question: "Nhạc sĩ thiên tài Mozart sinh ra ở đâu?", answers: ["Áo", "Đức", "Ba Lan", "Anh"], correct: 0 },
+        { question: "Bài hát 'Despacito' thuộc thể loại nhạc gì?", answers: ["Pop Ballad", "Latin Pop", "Rock", "Jazz"], correct: 1 },
+        { question: "Vũ điệu Gangnam Style là của ai?", answers: ["Bi Rain", "PSY", "G-Dragon", "Big Bang"], correct: 1 },
+        { question: "Nhóm nhạc The Beatles đến từ thành phố nào?", answers: ["London", "Manchester", "Liverpool", "Birmingham"], correct: 2 },
+        { question: "Đàn T'rưng là nhạc cụ của dân tộc nào?", answers: ["Kinh", "Mông", "Ba Na", "Thái"], correct: 2 }
     ],
     game: [
         { question: "Mario đi cứu ai?", answers: ["Công chúa Peach", "Zelda", "Daisy", "Nấm lùn"], correct: 0 },
@@ -22,7 +27,12 @@ const quizData = {
         { question: "Tác giả Flappy Bird?", answers: ["Nguyễn Hà Đông", "Lê Minh", "Zuckerberg", "Bill Gates"], correct: 0 },
         { question: "Kẻ giả mạo trong Among Us?", answers: ["Crewmate", "Impostor", "Killer", "Ghost"], correct: 1 },
         { question: "CS:GO thuộc thể loại gì?", answers: ["MOBA", "FPS", "RPG", "RTS"], correct: 1 },
-        { question: "Pac-Man có hình gì?", answers: ["Vuông", "Tròn khuyết", "Tam giác", "Sao"], correct: 1 }
+        { question: "Pac-Man có hình gì?", answers: ["Vuông", "Tròn khuyết", "Tam giác", "Sao"], correct: 1 },
+        { question: "Tướng nào được gọi là 'Quỷ Kiếm Dạ Lê'?", answers: ["Zed", "Aatrox", "Yasuo", "Yone"], correct: 1 },
+        { question: "Game nào đoạt giải Game of the Year 2022?", answers: ["God of War", "Elden Ring", "Stray", "Horizon"], correct: 1 },
+        { question: "FIFA là game về môn gì?", answers: ["Bóng rổ", "Bóng đá", "Bóng chuyền", "Đua xe"], correct: 1 },
+        { question: "GTA V lấy bối cảnh thành phố nào?", answers: ["Liberty City", "Vice City", "Los Santos", "San Fierro"], correct: 2 },
+        { question: "Nhân vật chính trong The Witcher 3?", answers: ["Geralt", "Yennefer", "Ciri", "Vesemir"], correct: 0 }
     ],
     celeb: [
         { question: "Người sáng lập Tesla?", answers: ["Bill Gates", "Jeff Bezos", "Elon Musk", "Warren Buffett"], correct: 2 },
@@ -34,7 +44,12 @@ const quizData = {
         { question: "Người sáng lập Facebook?", answers: ["Jack Dorsey", "TikTok", "Mark Zuckerberg", "Instagram"], correct: 2 },
         { question: "Miss Grand 2021 là ai?", answers: ["Thùy Tiên", "Tiểu Vy", "Đỗ Mỹ Linh", "Khánh Vân"], correct: 0 },
         { question: "Vua bóng đá là ai?", answers: ["Messi", "Maradona", "Pele", "Zidane"], correct: 2 },
-        { question: "Einstein nổi tiếng với thuyết gì?", answers: ["Tiến hóa", "Tương đối", "Hấp dẫn", "Big Bang"], correct: 1 }
+        { question: "Einstein nổi tiếng với thuyết gì?", answers: ["Tiến hóa", "Tương đối", "Hấp dẫn", "Big Bang"], correct: 1 },
+        { question: "Ca sĩ nào được gọi là 'Họa mi tóc nâu'?", answers: ["Mỹ Tâm", "Hồng Nhung", "Thanh Lam", "Phương Thanh"], correct: 0 },
+        { question: "Bill Gates là người sáng lập công ty nào?", answers: ["Apple", "Microsoft", "Google", "Amazon"], correct: 1 },
+        { question: "Tổng thống da màu đầu tiên của Mỹ?", answers: ["Obama", "Biden", "Clinton", "Bush"], correct: 0 },
+        { question: "Diễn viên đóng vai Jack trong Titanic?", answers: ["Brad Pitt", "Tom Cruise", "Leonardo DiCaprio", "Johnny Depp"], correct: 2 },
+        { question: "Ai là người giàu nhất Việt Nam (2024)?", answers: ["Phạm Nhật Vượng", "Trịnh Văn Quyết", "Nguyễn Thị Phương Thảo", "Trần Đình Long"], correct: 0 }
     ],
     math: [
         { question: "Số Pi xấp xỉ bằng?", answers: ["3.14", "3.15", "3.12", "3.16"], correct: 0 },
@@ -46,7 +61,12 @@ const quizData = {
         { question: "Phép chia không xác định cho số nào?", answers: ["0", "1", "10", "-1"], correct: 0 },
         { question: "Hình vuông có mấy trục đối xứng?", answers: ["2", "3", "4", "5"], correct: 2 },
         { question: "Diện tích hình chữ nhật?", answers: ["Dài + Rộng", "Dài x Rộng", "(D+R)x2", "Cạnh x Cạnh"], correct: 1 },
-        { question: "1kg bông và 1kg sắt?", answers: ["Sắt nặng hơn", "Bông nặng hơn", "Bằng nhau", "Không so sánh được"], correct: 2 }
+        { question: "1kg bông và 1kg sắt?", answers: ["Sắt nặng hơn", "Bông nặng hơn", "Bằng nhau", "Không so sánh được"], correct: 2 },
+        { question: "Kết quả của 2 + 2 x 2?", answers: ["8", "6", "4", "10"], correct: 1 },
+        { question: "Góc vuông bao nhiêu độ?", answers: ["60", "90", "180", "45"], correct: 1 },
+        { question: "Số La Mã X bằng bao nhiêu?", answers: ["5", "10", "50", "100"], correct: 1 },
+        { question: "Hình có 6 cạnh gọi là gì?", answers: ["Tứ giác", "Ngũ giác", "Lục giác", "Bát giác"], correct: 2 },
+        { question: "Số nào chia hết cho cả 2 và 5?", answers: ["12", "15", "20", "25"], correct: 2 }
     ],
     history: [
         { question: "Ngô Quyền thắng quân Nam Hán ở đâu?", answers: ["Sông Hồng", "Sông Bạch Đằng", "Sông Hương", "Sông Cửu Long"], correct: 1 },
@@ -58,7 +78,12 @@ const quizData = {
         { question: "Kim tự tháp ở đâu?", answers: ["Hy Lạp", "La Mã", "Ai Cập", "Ấn Độ"], correct: 2 },
         { question: "Tên cũ của TP.HCM?", answers: ["Gia Định", "Sài Gòn", "Chợ Lớn", "Tân Bình"], correct: 1 },
         { question: "Ngày Giải phóng miền Nam?", answers: ["30/4", "1/5", "2/9", "19/5"], correct: 0 },
-        { question: "Nữ tướng đầu tiên của VN?", answers: ["Bà Triệu", "Hai Bà Trưng", "Bùi Thị Xuân", "Nguyễn Thị Định"], correct: 1 }
+        { question: "Nữ tướng đầu tiên của VN?", answers: ["Bà Triệu", "Hai Bà Trưng", "Bùi Thị Xuân", "Nguyễn Thị Định"], correct: 1 },
+        { question: "Vị vua dời đô về Thăng Long?", answers: ["Lý Thái Tổ", "Đinh Tiên Hoàng", "Lê Lợi", "Quang Trung"], correct: 0 },
+        { question: "Ai là người sáng lập ra Đảng Cộng sản Việt Nam?", answers: ["Võ Nguyên Giáp", "Phạm Văn Đồng", "Hồ Chí Minh", "Trường Chinh"], correct: 2 },
+        { question: "Chiến thắng Điện Biên Phủ năm nào?", answers: ["1945", "1954", "1968", "1975"], correct: 1 },
+        { question: "Lá cờ đỏ sao vàng xuất hiện lần đầu năm nào?", answers: ["1930", "1940", "1945", "1950"], correct: 1 },
+        { question: "Tác giả 'Hịch tướng sĩ'?", answers: ["Lý Thường Kiệt", "Trần Hưng Đạo", "Nguyễn Trãi", "Quang Trung"], correct: 1 }
     ],
     food: [
         { question: "Quốc hồn quốc túy của VN?", answers: ["Bún chả", "Phở", "Bánh mì", "Nem rán"], correct: 1 },
@@ -70,7 +95,12 @@ const quizData = {
         { question: "Quả gì nặng mùi nhất?", answers: ["Mít", "Sầu riêng", "Xoài", "Ổi"], correct: 1 },
         { question: "Nguyên liệu chính của socola?", answers: ["Cà phê", "Ca cao", "Vani", "Sữa"], correct: 1 },
         { question: "Cao Lầu là đặc sản ở đâu?", answers: ["Huế", "Đà Nẵng", "Hội An", "Nha Trang"], correct: 2 },
-        { question: "Spaghetti là món gì?", answers: ["Mì Ý", "Mì Gõ", "Mì Quảng", "Mì Cay"], correct: 0 }
+        { question: "Spaghetti là món gì?", answers: ["Mì Ý", "Mì Gõ", "Mì Quảng", "Mì Cay"], correct: 0 },
+        { question: "Bánh chưng hình gì?", answers: ["Tròn", "Vuông", "Tam giác", "Chữ nhật"], correct: 1 },
+        { question: "Cà phê chồn nổi tiếng ở đâu?", answers: ["Hà Nội", "Sài Gòn", "Tây Nguyên", "Miền Tây"], correct: 2 },
+        { question: "Món Dimsum xuất xứ từ đâu?", answers: ["Nhật", "Hàn", "Trung Hoa", "Thái"], correct: 2 },
+        { question: "Nem chua nổi tiếng ở tỉnh nào?", answers: ["Thanh Hóa", "Nghệ An", "Hà Tĩnh", "Huế"], correct: 0 },
+        { question: "Quả gì dùng để làm rượu vang?", answers: ["Táo", "Nho", "Dâu", "Lê"], correct: 1 }
     ],
     geo: [
         { question: "Châu lục lạnh nhất?", answers: ["Âu", "Á", "Nam Cực", "Bắc Cực"], correct: 2 },
@@ -82,7 +112,12 @@ const quizData = {
         { question: "Nước nào hình chiếc ủng?", answers: ["Anh", "Pháp", "Ý", "Đức"], correct: 2 },
         { question: "Biển Đông thuộc đại dương nào?", answers: ["Ấn Độ Dương", "Đại Tây Dương", "Thái Bình Dương", "Bắc Băng Dương"], correct: 2 },
         { question: "Sa mạc lớn nhất?", answers: ["Sahara", "Gobi", "Namib", "Kalahari"], correct: 0 },
-        { question: "Thành phố ngàn hoa?", answers: ["Hà Nội", "Đà Lạt", "Sa Pa", "Tam Đảo"], correct: 1 }
+        { question: "Thành phố ngàn hoa?", answers: ["Hà Nội", "Đà Lạt", "Sa Pa", "Tam Đảo"], correct: 1 },
+        { question: "Đất nước Mặt trời mọc là ai?", answers: ["Hàn Quốc", "Triều Tiên", "Nhật Bản", "Trung Quốc"], correct: 2 },
+        { question: "Dòng sông nào chảy qua London?", answers: ["Seine", "Thames", "Danube", "Nile"], correct: 1 },
+        { question: "Thủ đô của nước Mỹ?", answers: ["New York", "Washington D.C", "California", "Texas"], correct: 1 },
+        { question: "Hồ Gươm nằm ở quận nào?", answers: ["Ba Đình", "Hoàn Kiếm", "Đống Đa", "Tây Hồ"], correct: 1 },
+        { question: "Đảo lớn nhất Việt Nam?", answers: ["Phú Quốc", "Cát Bà", "Lý Sơn", "Côn Đảo"], correct: 0 }
     ],
     sports: [
         { question: "Môn thể thao vua?", answers: ["Bóng rổ", "Bóng chuyền", "Bóng đá", "Quần vợt"], correct: 2 },
@@ -94,7 +129,12 @@ const quizData = {
         { question: "Môn dùng vợt và cầu?", answers: ["Tennis", "Cầu lông", "Bóng bàn", "Cầu mây"], correct: 1 },
         { question: "SEA Games là của khu vực nào?", answers: ["Châu Á", "Đông Nam Á", "Thế giới", "Châu Âu"], correct: 1 },
         { question: "Điểm tối đa 1 lần ném bóng rổ?", answers: ["1", "2", "3", "4"], correct: 2 },
-        { question: "Biệt danh Quỷ đỏ?", answers: ["Chelsea", "Liverpool", "MU", "Arsenal"], correct: 2 }
+        { question: "Biệt danh Quỷ đỏ?", answers: ["Chelsea", "Liverpool", "MU", "Arsenal"], correct: 2 },
+        { question: "Giải Grand Slam thuộc môn nào?", answers: ["Quần vợt", "Bóng đá", "Cầu lông", "Bơi"], correct: 0 },
+        { question: "VĐV Ánh Viên thi đấu môn gì?", answers: ["Điền kinh", "Bơi lội", "Bắn súng", "Cờ vua"], correct: 1 },
+        { question: "Số người trong 1 đội bóng chuyền?", answers: ["5", "6", "7", "11"], correct: 1 },
+        { question: "Quốc gia đăng cai World Cup 2018?", answers: ["Nga", "Brazil", "Qatar", "Đức"], correct: 0 },
+        { question: "Park Hang-seo là HLV môn gì?", answers: ["Bóng đá", "Bắn cung", "Taekwondo", "Bóng bàn"], correct: 0 }
     ],
     science: [
         { question: "Công thức nước?", answers: ["CO2", "H2O", "O2", "NaCl"], correct: 1 },
@@ -106,7 +146,12 @@ const quizData = {
         { question: "Kim loại dẫn điện tốt nhất?", answers: ["Vàng", "Đồng", "Bạc", "Sắt"], correct: 2 },
         { question: "Người tìm ra lực hấp dẫn?", answers: ["Einstein", "Newton", "Edison", "Tesla"], correct: 1 },
         { question: "Máu đỏ do đâu?", answers: ["Hồng cầu", "Bạch cầu", "Tiểu cầu", "Huyết tương"], correct: 0 },
-        { question: "Nước sôi bao nhiêu độ?", answers: ["90", "100", "110", "120"], correct: 1 }
+        { question: "Nước sôi bao nhiêu độ?", answers: ["90", "100", "110", "120"], correct: 1 },
+        { question: "Động vật lớn nhất hành tinh?", answers: ["Voi", "Cá voi xanh", "Khủng long", "Hươu cao cổ"], correct: 1 },
+        { question: "Mặt Trời mọc ở hướng nào?", answers: ["Đông", "Tây", "Nam", "Bắc"], correct: 0 },
+        { question: "Trong hệ mặt trời có mấy hành tinh?", answers: ["7", "8", "9", "10"], correct: 1 },
+        { question: "Con gì thở bằng mang?", answers: ["Chó", "Cá", "Gà", "Mèo"], correct: 1 },
+        { question: "Chất lỏng màu đỏ trong nhiệt kế là gì?", answers: ["Nước", "Rượu", "Thủy ngân", "Dầu"], correct: 2 }
     ],
     tech: [
         { question: "CPU ví như gì?", answers: ["Tim", "Mắt", "Não", "Tay"], correct: 2 },
@@ -118,7 +163,12 @@ const quizData = {
         { question: "Wifi dùng sóng gì?", answers: ["Âm", "Nước", "Vô tuyến", "Thần"], correct: 2 },
         { question: "Ctrl + C là gì?", answers: ["Cắt", "Dán", "Sao chép", "Lưu"], correct: 2 },
         { question: "Virus máy tính là?", answers: ["Vi khuẩn", "Phần mềm độc hại", "Bụi", "Lỗi"], correct: 1 },
-        { question: "Google thuộc công ty nào?", answers: ["Meta", "Amazon", "Alphabet", "Apple"], correct: 2 }
+        { question: "Google thuộc công ty nào?", answers: ["Meta", "Amazon", "Alphabet", "Apple"], correct: 2 },
+        { question: "Ngôn ngữ lập trình phổ biến nhất?", answers: ["Pascal", "Python/JS", "Assembly", "HTML"], correct: 1 },
+        { question: "RAM là bộ nhớ gì?", answers: ["Vĩnh viễn", "Tạm thời", "Chỉ đọc", "Lưu trữ"], correct: 1 },
+        { question: "Ai tạo ra iPhone?", answers: ["Steve Jobs", "Bill Gates", "Tim Cook", "Elon Musk"], correct: 0 },
+        { question: "Đuôi file ảnh phổ biến?", answers: [".mp3", ".exe", ".jpg", ".txt"], correct: 2 },
+        { question: "Blockchain gắn liền với gì?", answers: ["Tiền ảo", "Mạng xã hội", "Game", "Nhạc"], correct: 0 }
     ]
 };
 
@@ -127,6 +177,8 @@ let currentQuestions = [];
 let currentQuestionIndex = 0;
 let score = 0;
 let userName = "";
+let hintsLeft = 3; 
+let isHintUsedRound = false; 
 const MAX_HIGH_SCORES = 5;
 
 // --- DOM ELEMENTS ---
@@ -140,14 +192,18 @@ const countEl = document.getElementById('question-counter');
 const finalScoreEl = document.getElementById('final-score');
 const highScoresList = document.getElementById('high-scores-list');
 
-// Popup Elements
+// Hints
+const btnHint = document.getElementById('btn-hint');
+const hintCountEl = document.getElementById('hint-count');
+
+// Popup
 const modal = document.getElementById('feedback-modal');
 const modalContent = document.querySelector('.modal-content');
 const feedbackIcon = document.getElementById('feedback-icon');
 const feedbackTitle = document.getElementById('feedback-title');
 const feedbackText = document.getElementById('feedback-text');
 
-// Audio Elements
+// Audio
 const soundCorrect = document.getElementById('sound-correct');
 const soundWrong = document.getElementById('sound-wrong');
 const bgMusic = document.getElementById('bg-music');
@@ -155,11 +211,10 @@ const bgMusic = document.getElementById('bg-music');
 // --- HỆ THỐNG ÂM THANH ---
 function playBackgroundMusic() {
     if (bgMusic) {
-        bgMusic.volume = 0.2; // Nhạc nền nhỏ
+        bgMusic.volume = 0.2; 
         bgMusic.play().catch(e => console.log("Chặn tự phát nhạc:", e));
     }
 }
-
 function playSound(audio) {
     if (audio) {
         audio.currentTime = 0;
@@ -167,7 +222,16 @@ function playSound(audio) {
     }
 }
 
-// --- ĐIỀU HƯỚNG MÀN HÌNH ---
+// --- HÀM RANDOM ---
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+
+// --- ĐIỀU HƯỚNG ---
 function showScreen(id) {
     screens.forEach(screen => screen.classList.remove('active'));
     document.getElementById(id).classList.add('active');
@@ -178,20 +242,24 @@ function goToCategory() {
     const name = nameInput.value.trim();
     if (name) {
         userName = name;
-        playBackgroundMusic(); // Bật nhạc nền
+        playBackgroundMusic();
         showScreen('category-screen');
     } else {
         alert("Vui lòng nhập tên chiến binh!");
     }
 }
 
-// 2. CHỌN CHỦ ĐỀ
+// 2. CHỌN CHỦ ĐỀ & START
 function startGame(category) {
     if (!quizData[category]) return;
     
-    currentQuestions = quizData[category];
+    // Copy và Random câu hỏi
+    let questions = [...quizData[category]];
+    currentQuestions = shuffleArray(questions);
+    
     currentQuestionIndex = 0;
     score = 0;
+    hintsLeft = 3; 
     
     showScreen('game-screen');
     loadQuestion();
@@ -201,6 +269,9 @@ function startGame(category) {
 // 3. TẢI CÂU HỎI
 function loadQuestion() {
     answersContainer.innerHTML = '';
+    
+    // QUAN TRỌNG: RESET TRẠNG THÁI GỢI Ý KHI QUA CÂU MỚI
+    isHintUsedRound = false; 
     
     if (currentQuestionIndex >= currentQuestions.length) {
         endGame();
@@ -214,9 +285,12 @@ function loadQuestion() {
         const button = document.createElement('button');
         button.innerText = answer;
         button.classList.add('btn-answer');
+        button.dataset.index = index; 
         button.onclick = () => selectAnswer(index, currentQ.correct, button);
         answersContainer.appendChild(button);
     });
+
+    updateHintUI(); // Cập nhật lại nút gợi ý (để nó sáng lại)
 }
 
 function updateUI() {
@@ -226,21 +300,55 @@ function updateUI() {
     progressEl.style.width = `${percent}%`;
 }
 
-// 4. XỬ LÝ TRẢ LỜI & POPUP
+// --- LOGIC GỢI Ý (ĐÃ SỬA LỖI) ---
+function useHint() {
+    if (hintsLeft <= 0 || isHintUsedRound) return;
+
+    const currentQ = currentQuestions[currentQuestionIndex];
+    const buttons = Array.from(answersContainer.children);
+    
+    // Lấy đáp án sai
+    const wrongAnswers = buttons.filter((btn, index) => index !== currentQ.correct);
+    shuffleArray(wrongAnswers);
+    
+    // Ẩn 2 đáp án sai
+    wrongAnswers.slice(0, 2).forEach(btn => btn.classList.add('hidden'));
+
+    hintsLeft--;
+    isHintUsedRound = true;
+    updateHintUI();
+}
+
+function updateHintUI() {
+    hintCountEl.innerText = hintsLeft;
+    
+    // Logic khóa nút: Hết lượt HOẶC Đã dùng ở câu này
+    if (hintsLeft <= 0 || isHintUsedRound) {
+        btnHint.disabled = true;
+        btnHint.style.cursor = "not-allowed";
+        btnHint.style.opacity = 0.6;
+    } else {
+        btnHint.disabled = false;
+        btnHint.style.cursor = "pointer";
+        btnHint.style.opacity = 1;
+    }
+}
+
+// 4. TRẢ LỜI
 function selectAnswer(selectedIndex, correctIndex, btnClicked) {
     const buttons = answersContainer.children;
     for (let btn of buttons) btn.disabled = true;
+    
+    btnHint.disabled = true; // Khóa gợi ý
 
     const correctAnsText = currentQuestions[currentQuestionIndex].answers[correctIndex];
 
     if (selectedIndex === correctIndex) {
-        // ĐÚNG
         btnClicked.classList.add('correct');
         score += 10;
         playSound(soundCorrect);
         showFeedback(true, correctAnsText);
     } else {
-        // SAI
         btnClicked.classList.add('wrong');
         if (buttons[correctIndex]) buttons[correctIndex].classList.add('correct');
         playSound(soundWrong);
@@ -251,22 +359,21 @@ function selectAnswer(selectedIndex, correctIndex, btnClicked) {
 
 function showFeedback(isCorrect, text) {
     modal.classList.add('active');
-    modalContent.className = 'modal-content'; // Reset class
+    modalContent.className = 'modal-content'; 
 
     if (isCorrect) {
         modalContent.classList.add('correct');
         feedbackIcon.innerHTML = '<i class="fas fa-check-circle"></i>';
-        feedbackTitle.innerText = "Chính Xác!";
+        feedbackTitle.innerText = "Đúng rồi!";
         feedbackText.innerText = "Ăn may chứ gì!";
     } else {
         modalContent.classList.add('wrong');
         feedbackIcon.innerHTML = '<i class="fas fa-times-circle"></i>';
-        feedbackTitle.innerText = "Sai Rồi, Bạn quá ngu !";
+        feedbackTitle.innerText = "Sai rồi, bạn quá ngu!";
         feedbackText.innerHTML = `Đáp án đúng là:<br><b>${text}</b>`;
     }
 }
 
-// Hàm này được gọi khi bấm nút trong Popup
 function closeFeedback() {
     modal.classList.remove('active');
     currentQuestionIndex++;
@@ -279,7 +386,7 @@ function closeFeedback() {
     }
 }
 
-// 5. KẾT THÚC GAME
+// 5. KẾT THÚC
 function endGame() {
     showScreen('result-screen');
     finalScoreEl.innerText = score;

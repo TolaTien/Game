@@ -287,3 +287,40 @@ h1, h2 {
     .category-list { grid-template-columns: 1fr; } /* Mobile về 1 cột cho dễ bấm */
     .input-group input { font-size: 16px; }
 }
+
+/* --- HINT BUTTON --- */
+.btn-hint {
+    background: #f1c40f; /* Màu vàng */
+    color: #2d3436;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: 0.3s;
+    box-shadow: 0 4px 0 #f39c12; /* Hiệu ứng nổi 3D */
+}
+
+.btn-hint:hover {
+    transform: translateY(-2px);
+}
+
+.btn-hint:active {
+    transform: translateY(2px);
+    box-shadow: none;
+}
+
+.btn-hint:disabled {
+    background: #b2bec3;
+    color: #636e72;
+    box-shadow: none;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Hiệu ứng làm mờ đáp án sai khi dùng gợi ý */
+.btn-answer.hidden {
+    visibility: hidden; /* Ẩn đi nhưng vẫn giữ chỗ để không vỡ layout */
+    pointer-events: none;
+}
