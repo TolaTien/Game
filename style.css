@@ -194,3 +194,79 @@ h1, h2 {
 .leaderboard li:last-child {
     border-bottom: none;
 }
+
+/* --- MOBILE RESPONSIVE (Dành cho điện thoại) --- */
+@media screen and (max-width: 600px) {
+    
+    /* 1. Căn chỉnh khung chính */
+    .container {
+        width: 95%;       /* Rộng hơn trên màn hình nhỏ */
+        padding: 1.5rem;  /* Giảm khoảng cách lề trong */
+        margin: 10px auto; /* Căn giữa */
+    }
+
+    /* 2. Điều chỉnh chữ tiêu đề cho đỡ tốn diện tích */
+    h1 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+    
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    /* 3. Nút bấm to hơn để dễ dùng ngón tay cái */
+    .btn, .btn-category, .btn-answer {
+        padding: 14px;      /* Tăng độ dày nút */
+        font-size: 1rem;    /* Chữ rõ ràng */
+        width: 100%;        /* Nút full chiều ngang */
+    }
+    
+    .btn:hover, .btn-category:hover, .btn-answer:hover {
+        transform: none; /* Tắt hiệu ứng phóng to trên điện thoại để đỡ bị giật */
+    }
+
+    /* 4. Input nhập tên */
+    .input-group input {
+        font-size: 16px; /* Size 16px để iPhone không tự phóng to khi nhập */
+        padding: 14px;
+    }
+
+    /* 5. Bảng xếp hạng */
+    .leaderboard li {
+        font-size: 0.9rem;
+        padding: 10px 5px;
+    }
+
+    /* 6. Thanh tiến trình */
+    .progress-bar {
+        height: 8px; /* Dày hơn xíu cho dễ nhìn */
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* --- YOUTUBE MUSIC PLAYER --- */
+#youtube-player {
+    position: absolute;
+    top: -9999px;  /* Đẩy ra khỏi màn hình */
+    left: -9999px;
+    width: 1px;    /* Kích thước tối thiểu */
+    height: 1px;
+    visibility: hidden; /* Ẩn đi nhưng vẫn tồn tại trong DOM */
+}
+
+/* Sửa lại đoạn này để hiển thị 2 cột */
+.category-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Chia 2 cột bằng nhau */
+    gap: 10px;
+    max-height: 400px; /* Giới hạn chiều cao */
+    overflow-y: auto;  /* Cho phép cuộn nếu quá dài */
+}
+
+/* Thêm css cho icon đẹp hơn */
+.btn-category i {
+    width: 25px;
+    text-align: center;
+    color: var(--primary);
+}
