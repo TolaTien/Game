@@ -5,6 +5,7 @@
     --light: #dfe6e9;
     --success: #00b894;
     --error: #d63031;
+    --glass: rgba(255, 255, 255, 0.95);
 }
 
 * {
@@ -21,10 +22,11 @@ body {
     justify-content: center;
     align-items: center;
     color: var(--dark);
+    overflow: hidden; /* Tránh thanh cuộn trang chính */
 }
 
 .container {
-    background: rgba(255, 255, 255, 0.95);
+    background: var(--glass);
     padding: 2rem;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
@@ -32,7 +34,17 @@ body {
     max-width: 500px;
     text-align: center;
     position: relative;
-    overflow: hidden;
+    max-height: 90vh; /* Giới hạn chiều cao để không bị tràn màn hình */
+    overflow-y: auto; /* Cho phép cuộn nội dung bên trong nếu dài */
+}
+
+/* Ẩn thanh cuộn xấu xí */
+.container::-webkit-scrollbar {
+    width: 5px;
+}
+.container::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 5px;
 }
 
 .screen {
@@ -50,7 +62,7 @@ body {
 }
 
 h1, h2 {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     color: var(--primary);
 }
 
@@ -80,6 +92,10 @@ h1, h2 {
     cursor: pointer;
     transition: 0.3s;
     font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
 }
 
 .btn:hover {
@@ -87,11 +103,12 @@ h1, h2 {
     transform: scale(1.05);
 }
 
-/* Category Buttons */
+/* Category Grid Layout */
 .category-list {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Chia 2 cột */
     gap: 10px;
+    margin-bottom: 10px;
 }
 
 .btn-category {
@@ -100,17 +117,26 @@ h1, h2 {
     padding: 15px;
     border-radius: 12px;
     cursor: pointer;
-    font-size: 1.1rem;
+    font-size: 1rem;
     text-align: left;
     transition: 0.3s;
     display: flex;
     align-items: center;
     gap: 10px;
+    color: var(--dark);
+}
+
+.btn-category i {
+    width: 25px;
+    text-align: center;
+    color: var(--primary);
+    font-size: 1.2rem;
 }
 
 .btn-category:hover {
     border-color: var(--primary);
     background: #f0f3ff;
+    transform: translateY(-2px);
 }
 
 /* Game Screen */
@@ -124,10 +150,10 @@ h1, h2 {
 
 .progress-bar {
     width: 100%;
-    height: 6px;
+    height: 8px;
     background: var(--light);
-    border-radius: 3px;
-    margin-bottom: 2rem;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
     overflow: hidden;
 }
 
@@ -135,7 +161,7 @@ h1, h2 {
     height: 100%;
     background: var(--primary);
     width: 0%;
-    transition: width 0.3s ease;
+    transition: width 0.5s ease;
 }
 
 .answers-container {
@@ -147,16 +173,18 @@ h1, h2 {
 .btn-answer {
     background: white;
     border: 1px solid var(--light);
-    padding: 12px;
+    padding: 15px;
     border-radius: 8px;
     cursor: pointer;
     transition: 0.2s;
     text-align: left;
     font-size: 1rem;
+    font-weight: 500;
 }
 
 .btn-answer:hover {
     background: #f9f9f9;
+    border-color: var(--primary);
 }
 
 .btn-answer.correct {
@@ -185,7 +213,7 @@ h1, h2 {
 }
 
 .leaderboard li {
-    padding: 8px;
+    padding: 10px;
     border-bottom: 1px solid #dfe6e9;
     display: flex;
     justify-content: space-between;
@@ -195,78 +223,67 @@ h1, h2 {
     border-bottom: none;
 }
 
-/* --- MOBILE RESPONSIVE (Dành cho điện thoại) --- */
-@media screen and (max-width: 600px) {
-    
-    /* 1. Căn chỉnh khung chính */
-    .container {
-        width: 95%;       /* Rộng hơn trên màn hình nhỏ */
-        padding: 1.5rem;  /* Giảm khoảng cách lề trong */
-        margin: 10px auto; /* Căn giữa */
-    }
-
-    /* 2. Điều chỉnh chữ tiêu đề cho đỡ tốn diện tích */
-    h1 {
-        font-size: 1.8rem;
-        margin-bottom: 1rem;
-    }
-    
-    h2 {
-        font-size: 1.4rem;
-    }
-
-    /* 3. Nút bấm to hơn để dễ dùng ngón tay cái */
-    .btn, .btn-category, .btn-answer {
-        padding: 14px;      /* Tăng độ dày nút */
-        font-size: 1rem;    /* Chữ rõ ràng */
-        width: 100%;        /* Nút full chiều ngang */
-    }
-    
-    .btn:hover, .btn-category:hover, .btn-answer:hover {
-        transform: none; /* Tắt hiệu ứng phóng to trên điện thoại để đỡ bị giật */
-    }
-
-    /* 4. Input nhập tên */
-    .input-group input {
-        font-size: 16px; /* Size 16px để iPhone không tự phóng to khi nhập */
-        padding: 14px;
-    }
-
-    /* 5. Bảng xếp hạng */
-    .leaderboard li {
-        font-size: 0.9rem;
-        padding: 10px 5px;
-    }
-
-    /* 6. Thanh tiến trình */
-    .progress-bar {
-        height: 8px; /* Dày hơn xíu cho dễ nhìn */
-        margin-bottom: 1.5rem;
-    }
+/* --- POPUP MODAL --- */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s;
 }
 
-/* --- YOUTUBE MUSIC PLAYER --- */
-#youtube-player {
-    position: absolute;
-    top: -9999px;  /* Đẩy ra khỏi màn hình */
-    left: -9999px;
-    width: 1px;    /* Kích thước tối thiểu */
-    height: 1px;
-    visibility: hidden; /* Ẩn đi nhưng vẫn tồn tại trong DOM */
+.modal.active {
+    display: flex;
 }
 
-/* Sửa lại đoạn này để hiển thị 2 cột */
-.category-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Chia 2 cột bằng nhau */
-    gap: 10px;
-    max-height: 400px; /* Giới hạn chiều cao */
-    overflow-y: auto;  /* Cho phép cuộn nếu quá dài */
-}
-
-/* Thêm css cho icon đẹp hơn */
-.btn-category i {
-    width: 25px;
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
     text-align: center;
-    color: var(--primary);
+    width: 90%;
+    max-width: 350px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    transform: scale(0.8);
+    animation: popUp 0.3s forwards;
+}
+
+@keyframes popUp {
+    to { transform: scale(1); }
+}
+
+#feedback-icon {
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.modal-content.correct #feedback-icon { color: var(--success); }
+.modal-content.correct h2 { color: var(--success); }
+
+.modal-content.wrong #feedback-icon { color: var(--error); }
+.modal-content.wrong h2 { color: var(--error); }
+
+#feedback-text {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #636e72;
+    line-height: 1.5;
+}
+
+/* --- MOBILE RESPONSIVE --- */
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 1.5rem;
+        width: 95%;
+    }
+    h1 { font-size: 1.8rem; }
+    .btn, .btn-category, .btn-answer { padding: 14px; }
+    .category-list { grid-template-columns: 1fr; } /* Mobile về 1 cột cho dễ bấm */
+    .input-group input { font-size: 16px; }
 }

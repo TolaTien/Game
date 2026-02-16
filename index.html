@@ -3,58 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Quiz Game</title>
+    <title>Quiz Master Pro</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
     <div class="container">
         <div id="start-screen" class="screen active">
             <h1>QUIZ MASTER</h1>
-            <p>Tiến đẹp trai 😎</p>
+            <p>Design by Tien dep trai</p>
             <div class="input-group">
-                <input type="text" id="username" placeholder="Nhập tên của bạn...">
+                <input type="text" id="username" placeholder="Enter your name...">
             </div>
-            <button class="btn" onclick="goToCategory()">Bắt đầu</button>
+            <button class="btn" onclick="goToCategory()">Start now</button>
         </div>
 
-<div id="category-screen" class="screen">
-    <h2>Chọn Chủ Đề</h2>
-    <div class="category-list">
-        <button class="btn-category" onclick="startGame('music')">
-            <i class="fas fa-music"></i> Âm nhạc
-        </button>
-        <button class="btn-category" onclick="startGame('game')">
-            <i class="fas fa-gamepad"></i> Game
-        </button>
-        <button class="btn-category" onclick="startGame('celeb')">
-            <i class="fas fa-star"></i> Người nổi tiếng
-        </button>
-        <button class="btn-category" onclick="startGame('math')">
-            <i class="fas fa-calculator"></i> Toán học
-        </button>
-        <button class="btn-category" onclick="startGame('history')">
-            <i class="fas fa-landmark"></i> Lịch sử
-        </button>
-        <button class="btn-category" onclick="startGame('food')">
-            <i class="fas fa-utensils"></i> Ẩm thực
-        </button>
-        <button class="btn-category" onclick="startGame('geo')">
-            <i class="fas fa-globe-asia"></i> Địa lý
-        </button>
-        <button class="btn-category" onclick="startGame('sports')">
-            <i class="fas fa-futbol"></i> Thể thao
-        </button>
-        <button class="btn-category" onclick="startGame('science')">
-            <i class="fas fa-atom"></i> Khoa học
-        </button>
-        <button class="btn-category" onclick="startGame('tech')">
-            <i class="fas fa-laptop-code"></i> Công nghệ
-        </button>
-    </div>
-</div>
+        <div id="category-screen" class="screen">
+            <h2>Chọn Chủ Đề</h2>
+            <div class="category-list">
+                <button class="btn-category" onclick="startGame('music')">
+                    <i class="fas fa-music"></i> Âm nhạc
+                </button>
+                <button class="btn-category" onclick="startGame('game')">
+                    <i class="fas fa-gamepad"></i> Game
+                </button>
+                <button class="btn-category" onclick="startGame('celeb')">
+                    <i class="fas fa-star"></i> Người nổi tiếng
+                </button>
+                <button class="btn-category" onclick="startGame('math')">
+                    <i class="fas fa-calculator"></i> Toán học
+                </button>
+                <button class="btn-category" onclick="startGame('history')">
+                    <i class="fas fa-landmark"></i> Lịch sử
+                </button>
+                <button class="btn-category" onclick="startGame('food')">
+                    <i class="fas fa-utensils"></i> Ẩm thực
+                </button>
+                <button class="btn-category" onclick="startGame('geo')">
+                    <i class="fas fa-globe-asia"></i> Địa lý
+                </button>
+                <button class="btn-category" onclick="startGame('sports')">
+                    <i class="fas fa-futbol"></i> Thể thao
+                </button>
+                <button class="btn-category" onclick="startGame('science')">
+                    <i class="fas fa-atom"></i> Khoa học
+                </button>
+                <button class="btn-category" onclick="startGame('tech')">
+                    <i class="fas fa-laptop-code"></i> Công nghệ
+                </button>
+            </div>
+        </div>
 
         <div id="game-screen" class="screen">
             <div class="header-game">
@@ -70,6 +70,7 @@
         </div>
 
         <div id="result-screen" class="screen">
+            <i class="fas fa-trophy" style="font-size: 50px; color: gold; margin-bottom: 20px;"></i>
             <h2>Kết Thúc!</h2>
             <p>Điểm của bạn: <span id="final-score">0</span></p>
             
@@ -84,9 +85,19 @@
         </div>
     </div>
 
-    <!-- <audio id="sound-correct" src="sounds/correct.mp3"></audio>
-    <audio id="sound-wrong" src="sounds/wrong.mp3"></audio> -->
-    <div id="youtube-player"></div>
+    <div id="feedback-modal" class="modal">
+        <div class="modal-content">
+            <div id="feedback-icon"></div>
+            <h2 id="feedback-title">Tiêu đề</h2>
+            <p id="feedback-text">Nội dung thông báo</p>
+            <button class="btn" onclick="closeFeedback()">Câu tiếp theo <i class="fas fa-arrow-right"></i></button>
+        </div>
+    </div>
+
+    <audio id="bg-music" src="music.mp3" loop></audio> 
+    <audio id="sound-correct" src="sounds/correct.mp3"></audio>
+    <audio id="sound-wrong" src="sounds/wrong.mp3"></audio>
+
     <script src="script.js"></script>
 </body>
 </html>
