@@ -203,6 +203,76 @@ const quizData = {
         { question: "Ai là tác giả của bộ truyện Doraemon?", answers: ["Fujiko F. Fujio", "Aoyama Gosho", "Oda Eiichiro", "Kishimoto Masashi"], correct: 0 },
         { question: "Trong Death Note, tên tử thần đi theo Light Yagami là gì?", answers: ["Rem", "Ryuk", "L", "Near"], correct: 1 },
         { question: "Môn thể thao chính trong anime Haikyuu!! là gì?", answers: ["Bóng rổ", "Bóng đá", "Bóng chuyền", "Bóng chày"], correct: 2 }
+    ],
+    // ... (Các chủ đề cũ như anime, movies ở trên) ...
+
+    astronomy: [
+        { question: "Hành tinh nào gần Mặt Trời nhất?", answers: ["Sao Kim", "Sao Thủy", "Sao Hỏa", "Trái Đất"], correct: 1 },
+        { question: "Hành tinh lớn nhất trong Hệ Mặt Trời là?", answers: ["Sao Thổ", "Sao Thiên Vương", "Sao Mộc", "Sao Hải Vương"], correct: 2 },
+        { question: "Vệ tinh tự nhiên duy nhất của Trái Đất là gì?", answers: ["Mặt Trăng", "Sao Chổi", "Phobos", "Titan"], correct: 0 },
+        { question: "Hệ Mặt Trời của chúng ta nằm trong thiên hà nào?", answers: ["Andromeda", "Ngân Hà (Milky Way)", "Thiên hà Sombrero", "Triangulum"], correct: 1 },
+        { question: "Sao chổi Halley xuất hiện trở lại sau khoảng bao nhiêu năm?", answers: ["50 năm", "76 năm", "100 năm", "150 năm"], correct: 1 },
+        { question: "Ngôi sao sáng nhất trên bầu trời đêm là ngôi sao nào?", answers: ["Sao Bắc Đẩu", "Sao Thiên Lang (Sirius)", "Mặt Trời", "Sao Hôm"], correct: 1 },
+        { question: "Phi hành gia Neil Armstrong đặt chân lên Mặt Trăng vào năm nào?", answers: ["1961", "1965", "1969", "1972"], correct: 2 },
+        { question: "Hành tinh nào được mệnh danh là Hành tinh Đỏ?", answers: ["Sao Kim", "Sao Hỏa", "Sao Mộc", "Sao Thủy"], correct: 1 },
+        { question: "Hành tinh nào có hệ vành đai ngoạn mục và dễ nhận biết nhất?", answers: ["Sao Thổ", "Sao Mộc", "Sao Thiên Vương", "Sao Hải Vương"], correct: 0 },
+        { question: "Kính viễn vọng không gian hiện đại và lớn nhất hiện nay tên là gì?", answers: ["Hubble", "Kepler", "James Webb", "Spitzer"], correct: 2 },
+        { question: "Mặt Trời cấu tạo chủ yếu từ hai loại khí nào?", answers: ["Oxy và Cacbon", "Hydro và Heli", "Nitơ và Hydro", "Heli và Oxy"], correct: 1 },
+        { question: "Vệ tinh nhân tạo đầu tiên bay vào vũ trụ tên là gì?", answers: ["Apollo 11", "Sputnik 1", "Voyager 1", "Explorer 1"], correct: 1 },
+        { question: "Ánh sáng từ Mặt Trời mất khoảng bao lâu để truyền tới Trái Đất?", answers: ["1 giây", "8 phút", "1 giờ", "1 ngày"], correct: 1 },
+        { question: "'Năm ánh sáng' là đơn vị dùng để đo đại lượng nào?", answers: ["Thời gian", "Tốc độ", "Khoảng cách", "Khối lượng"], correct: 2 },
+        { question: "Hành tinh lùn nổi tiếng nhất từng bị giáng cấp khỏi Hệ Mặt Trời?", answers: ["Ceres", "Eris", "Makemake", "Sao Diêm Vương (Pluto)"], correct: 3 }
+    ],
+    english: [
+        { question: "Từ nào đồng nghĩa với 'Happy'?", answers: ["Sad", "Glad", "Angry", "Tired"], correct: 1 },
+        { question: "Dạng quá khứ của động từ 'Go' là gì?", answers: ["Goed", "Gone", "Went", "Going"], correct: 2 },
+        { question: "Từ vựng nào dùng để chỉ 'Bầu trời'?", answers: ["Sun", "Cloud", "Star", "Sky"], correct: 3 },
+        { question: "Thành ngữ 'Piece of cake' có nghĩa bóng là gì?", answers: ["Một miếng bánh", "Rất khó", "Rất dễ dàng", "Đắt tiền"], correct: 2 },
+        { question: "Trái nghĩa với từ 'Beautiful' là?", answers: ["Pretty", "Ugly", "Cute", "Nice"], correct: 1 },
+        { question: "Động từ 'To be' đi với chủ ngữ 'He' ở thì hiện tại là?", answers: ["Am", "Is", "Are", "Be"], correct: 1 },
+        { question: "Từ 'Umbrella' bắt đầu bằng nguyên âm hay phụ âm?", answers: ["Nguyên âm", "Phụ âm", "Cả hai", "Không có quy tắc"], correct: 0 },
+        { question: "Thành ngữ 'Raining cats and dogs' nghĩa là gì?", answers: ["Mưa chó mèo", "Mưa rất to", "Trời hửng nắng", "Bão tuyết"], correct: 1 },
+        { question: "Dạng số nhiều của từ 'Child' là gì?", answers: ["Childs", "Childrens", "Children", "Childes"], correct: 2 },
+        { question: "Từ nào viết đúng chính tả tiếng Anh?", answers: ["Accommodate", "Acomodate", "Accomodate", "Acommodate"], correct: 0 },
+        { question: "Điền vào chỗ trống: 'I ___ a student.'", answers: ["is", "am", "are", "do"], correct: 1 },
+        { question: "Từ nào dùng để chỉ 'Thư viện'?", answers: ["Bookstore", "School", "Library", "Museum"], correct: 2 },
+        { question: "Con ngựa vằn trong tiếng Anh gọi là gì?", answers: ["Horse", "Tiger", "Zebra", "Lion"], correct: 2 },
+        { question: "'Environment' có nghĩa tiếng Việt là gì?", answers: ["Kinh tế", "Môi trường", "Giáo dục", "Y tế"], correct: 1 },
+        { question: "Từ dùng để hỏi về 'Thời gian' là?", answers: ["Where", "Who", "When", "Why"], correct: 2 }
+    ],
+    literature: [
+        { question: "Tác giả của kiệt tác 'Truyện Kiều' là ai?", answers: ["Nguyễn Du", "Nguyễn Trãi", "Hồ Xuân Hương", "Bà Huyện Thanh Quan"], correct: 0 },
+        { question: "Nhân vật Chị Dậu xuất hiện trong tác phẩm nào?", answers: ["Chí Phèo", "Tắt Đèn", "Lão Hạc", "Vợ Nhặt"], correct: 1 },
+        { question: "Nhà văn Nam Cao là tác giả của truyện ngắn nổi tiếng nào?", answers: ["Số Đỏ", "Lão Hạc", "Chí Phèo", "Cả B & C"], correct: 3 },
+        { question: "Ai là tác giả của 'Dế Mèn phiêu lưu ký'?", answers: ["Tô Hoài", "Xuân Diệu", "Thạch Lam", "Ngô Tất Tố"], correct: 0 },
+        { question: "Bài thơ 'Sóng' do nữ thi sĩ nào sáng tác?", answers: ["Hồ Xuân Hương", "Xuân Quỳnh", "Đoàn Thị Điểm", "Anh Thơ"], correct: 1 },
+        { question: "Vở kịch 'Romeo và Juliet' là của tác giả nào?", answers: ["Victor Hugo", "Mark Twain", "William Shakespeare", "Charles Dickens"], correct: 2 },
+        { question: "Tiểu thuyết 'Thép đã tôi thế đấy' có xuất xứ từ quốc gia nào?", answers: ["Mỹ", "Anh", "Pháp", "Liên Xô (Nga)"], correct: 3 },
+        { question: "'Bình Ngô Đại Cáo' được mệnh danh là gì của nước ta?", answers: ["Bài thơ hay nhất", "Tuyên ngôn độc lập thứ 2", "Bản hịch cổ nhất", "Kịch bản sân khấu"], correct: 1 },
+        { question: "Vũ Nương là nhân vật chính trong tác phẩm nào?", answers: ["Chuyện người con gái Nam Xương", "Truyện Kiều", "Lục Vân Tiên", "Hoàng Lê nhất thống chí"], correct: 0 },
+        { question: "Nhà thơ nào được mệnh danh là 'Ông hoàng thơ tình' Việt Nam?", answers: ["Hàn Mặc Tử", "Xuân Diệu", "Chế Lan Viên", "Huy Cận"], correct: 1 },
+        { question: "Loạt truyện Harry Potter thuộc thể loại văn học nào?", answers: ["Lãng mạn", "Trinh thám", "Kỳ ảo (Fantasy)", "Khoa học viễn tưởng"], correct: 2 },
+        { question: "Tác phẩm 'Ông lão đánh cá và con cá vàng' là của ai?", answers: ["Andersen", "Pushkin", "Grimm", "La Fontaine"], correct: 1 },
+        { question: "Trong tác phẩm 'Lão Hạc', Lão Hạc nuôi con vật gì?", answers: ["Con mèo", "Con trâu", "Con chó (Cậu Vàng)", "Con gà"], correct: 2 },
+        { question: "Bản 'Tuyên ngôn Độc lập' năm 1945 do ai trực tiếp soạn thảo?", answers: ["Trường Chinh", "Võ Nguyên Giáp", "Phạm Văn Đồng", "Hồ Chí Minh"], correct: 3 },
+        { question: "Trong truyện cổ tích quen thuộc, cô bé quàng khăn màu gì?", answers: ["Màu xanh", "Màu đỏ", "Màu vàng", "Màu đen"], correct: 1 }
+    ],
+    riddles: [
+        { question: "Nắng ba năm ta chưa hề bỏ bạn, là cái gì?", answers: ["Cái nón", "Cái bóng", "Cái áo", "Chiếc dép"], correct: 1 },
+        { question: "Con gì đập thì sống, không đập thì chết?", answers: ["Con muỗi", "Con tim", "Con đập", "Con rắn"], correct: 1 },
+        { question: "Bệnh gì bác sĩ bó tay?", answers: ["Đau đầu", "Gãy tay", "Bệnh nan y", "Sổ mũi"], correct: 1 },
+        { question: "Bỏ ngoài nướng trong, ăn ngoài bỏ trong là gì?", answers: ["Quả táo", "Củ khoai", "Bắp ngô (Bắp)", "Quả chuối"], correct: 2 },
+        { question: "Cổ gì dài nhất?", answers: ["Cổ hươu", "Cổ đại", "Cổ cò", "Cổ chai"], correct: 1 },
+        { question: "Xã đông nhất là xã nào?", answers: ["Xã hội", "Xã đàn", "Xã giao", "Xã xệ"], correct: 0 },
+        { question: "Lịch nào dài nhất?", answers: ["Lịch treo tường", "Lịch để bàn", "Lịch sử", "Lịch âm"], correct: 2 },
+        { question: "Quần rộng nhất là quần gì?", answers: ["Quần ống loe", "Quần đảo", "Quần đùi", "Quần dài"], correct: 1 },
+        { question: "Con đường dài nhất là đường gì?", answers: ["Đường sắt", "Đường cao tốc", "Đường đời", "Đường hầm"], correct: 2 },
+        { question: "Cái gì bạn không mượn mà vẫn phải trả?", answers: ["Tiền bạc", "Lời cảm ơn", "Đồ đạc", "Áo quần"], correct: 1 },
+        { question: "Từ nào trong tiếng Việt có 9 từ?", answers: ["Chín", "Từ ghép", "Câu hỏi", "Đoạn văn"], correct: 0 },
+        { question: "Có cổ nhưng không có miệng là cái gì?", answers: ["Cái bình", "Cái áo", "Cái cây", "Con sông"], correct: 1 },
+        { question: "Bánh gì đi lại thì mỏi chân?", answers: ["Bánh bao", "Bánh chưng", "Bánh xe", "Bánh trôi"], correct: 2 },
+        { question: "Cái gì chặt không đứt, bứt không rời, phơi không khô, đốt không cháy?", answers: ["Sợi dây", "Tình yêu", "Nước", "Tóc"], correct: 2 },
+        { question: "Kiến nào không bao giờ ngủ?", answers: ["Kiến lửa", "Kiến ba khoang", "Kiến thức", "Kiến gió"], correct: 2 }
     ]
 };
 
