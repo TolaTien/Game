@@ -22,7 +22,7 @@ body {
     justify-content: center;
     align-items: center;
     color: var(--dark);
-    overflow: hidden; /* Tránh thanh cuộn trang chính */
+    overflow: hidden;
 }
 
 .container {
@@ -34,293 +34,102 @@ body {
     max-width: 500px;
     text-align: center;
     position: relative;
-    max-height: 90vh; /* Giới hạn chiều cao để không bị tràn màn hình */
-    overflow-y: auto; /* Cho phép cuộn nội dung bên trong nếu dài */
+    max-height: 90vh;
+    overflow-y: auto;
 }
 
-/* Ẩn thanh cuộn xấu xí */
-.container::-webkit-scrollbar {
-    width: 5px;
-}
-.container::-webkit-scrollbar-thumb {
-    background: #ccc;
-    border-radius: 5px;
-}
+.container::-webkit-scrollbar { width: 5px; }
+.container::-webkit-scrollbar-thumb { background: #ccc; border-radius: 5px; }
 
-.screen {
-    display: none;
-    animation: fadeIn 0.5s ease;
-}
-
-.screen.active {
-    display: block;
-}
+.screen { display: none; animation: fadeIn 0.5s ease; }
+.screen.active { display: block; }
 
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-h1, h2 {
-    margin-bottom: 1rem;
-    color: var(--primary);
-}
+h1, h2 { margin-bottom: 1rem; color: var(--primary); }
 
-/* Input & Buttons */
 .input-group input {
-    width: 100%;
-    padding: 12px;
-    border: 2px solid var(--light);
-    border-radius: 10px;
-    margin-bottom: 1rem;
-    font-size: 1rem;
-    outline: none;
-    transition: 0.3s;
+    width: 100%; padding: 12px; border: 2px solid var(--light);
+    border-radius: 10px; margin-bottom: 1rem; font-size: 1rem; outline: none; transition: 0.3s;
 }
-
-.input-group input:focus {
-    border-color: var(--primary);
-}
+.input-group input:focus { border-color: var(--primary); }
 
 .btn {
-    background: var(--primary);
-    color: white;
-    border: none;
-    padding: 12px 30px;
-    border-radius: 25px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: 0.3s;
-    font-weight: 600;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
+    background: var(--primary); color: white; border: none; padding: 12px 30px;
+    border-radius: 25px; font-size: 1rem; cursor: pointer; transition: 0.3s;
+    font-weight: 600; display: inline-flex; align-items: center; justify-content: center; gap: 8px;
 }
+.btn:hover { background: var(--secondary); transform: scale(1.05); }
 
-.btn:hover {
-    background: var(--secondary);
-    transform: scale(1.05);
-}
-
-/* Category Grid Layout */
-.category-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Chia 2 cột */
-    gap: 10px;
-    margin-bottom: 10px;
-}
+.category-list { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px; }
 
 .btn-category {
-    background: white;
-    border: 2px solid var(--light);
-    padding: 15px;
-    border-radius: 12px;
-    cursor: pointer;
-    font-size: 1rem;
-    text-align: left;
-    transition: 0.3s;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: var(--dark);
+    background: white; border: 2px solid var(--light); padding: 15px; border-radius: 12px;
+    cursor: pointer; font-size: 1rem; text-align: left; transition: 0.3s;
+    display: flex; align-items: center; gap: 10px; color: var(--dark);
 }
+.btn-category i { width: 25px; text-align: center; color: var(--primary); font-size: 1.2rem; }
+.btn-category:hover { border-color: var(--primary); background: #f0f3ff; transform: translateY(-2px); }
 
-.btn-category i {
-    width: 25px;
-    text-align: center;
-    color: var(--primary);
-    font-size: 1.2rem;
-}
+.header-game { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: bold; color: #636e72; }
 
-.btn-category:hover {
-    border-color: var(--primary);
-    background: #f0f3ff;
-    transform: translateY(-2px);
-}
+/* CSS THANH THỜI GIAN CHẠY NGƯỢC */
+.timer-container { margin-bottom: 10px; }
+#timer-text { font-weight: bold; font-size: 1rem; text-align: right; display: block; margin-bottom: 5px; color: var(--dark); transition: color 0.3s;}
+.timer-bar-bg { width: 100%; height: 6px; background: var(--light); border-radius: 3px; overflow: hidden; }
+#timer-progress { height: 100%; background: var(--success); width: 100%; transition: width 1s linear, background-color 0.3s; }
 
-/* Game Screen */
-.header-game {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    font-weight: bold;
-    color: #636e72;
-}
+.progress-bar { width: 100%; height: 8px; background: var(--light); border-radius: 4px; margin-bottom: 1.5rem; overflow: hidden; margin-top: 10px; }
+.progress { height: 100%; background: var(--primary); width: 0%; transition: width 0.5s ease; }
 
-.progress-bar {
-    width: 100%;
-    height: 8px;
-    background: var(--light);
-    border-radius: 4px;
-    margin-bottom: 1.5rem;
-    overflow: hidden;
-}
-
-.progress {
-    height: 100%;
-    background: var(--primary);
-    width: 0%;
-    transition: width 0.5s ease;
-}
-
-.answers-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
+.answers-container { display: flex; flex-direction: column; gap: 10px; }
 .btn-answer {
-    background: white;
-    border: 1px solid var(--light);
-    padding: 15px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.2s;
-    text-align: left;
-    font-size: 1rem;
-    font-weight: 500;
+    background: white; border: 1px solid var(--light); padding: 15px; border-radius: 8px;
+    cursor: pointer; transition: 0.2s; text-align: left; font-size: 1rem; font-weight: 500;
 }
+.btn-answer:hover { background: #f9f9f9; border-color: var(--primary); }
+.btn-answer.correct { background: var(--success); color: white; border-color: var(--success); }
+.btn-answer.wrong { background: var(--error); color: white; border-color: var(--error); }
 
-.btn-answer:hover {
-    background: #f9f9f9;
-    border-color: var(--primary);
-}
+.leaderboard { margin: 20px 0; text-align: left; background: #f8f9fa; padding: 15px; border-radius: 10px; }
+.leaderboard ul { list-style: none; }
+.leaderboard li { padding: 10px; border-bottom: 1px solid #dfe6e9; display: flex; justify-content: space-between; }
+.leaderboard li:last-child { border-bottom: none; }
 
-.btn-answer.correct {
-    background: var(--success);
-    color: white;
-    border-color: var(--success);
-}
-
-.btn-answer.wrong {
-    background: var(--error);
-    color: white;
-    border-color: var(--error);
-}
-
-/* Leaderboard */
-.leaderboard {
-    margin: 20px 0;
-    text-align: left;
-    background: #f8f9fa;
-    padding: 15px;
-    border-radius: 10px;
-}
-
-.leaderboard ul {
-    list-style: none;
-}
-
-.leaderboard li {
-    padding: 10px;
-    border-bottom: 1px solid #dfe6e9;
-    display: flex;
-    justify-content: space-between;
-}
-
-.leaderboard li:last-child {
-    border-bottom: none;
-}
-
-/* --- POPUP MODAL --- */
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    justify-content: center;
-    align-items: center;
-    animation: fadeIn 0.3s;
+    display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); justify-content: center; align-items: center; animation: fadeIn 0.3s;
 }
-
-.modal.active {
-    display: flex;
-}
-
+.modal.active { display: flex; }
 .modal-content {
-    background: white;
-    padding: 30px;
-    border-radius: 20px;
-    text-align: center;
-    width: 90%;
-    max-width: 350px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-    transform: scale(0.8);
-    animation: popUp 0.3s forwards;
+    background: white; padding: 30px; border-radius: 20px; text-align: center;
+    width: 90%; max-width: 350px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); transform: scale(0.8); animation: popUp 0.3s forwards;
 }
 
-@keyframes popUp {
-    to { transform: scale(1); }
-}
-
-#feedback-icon {
-    font-size: 60px;
-    margin-bottom: 15px;
-}
-
+@keyframes popUp { to { transform: scale(1); } }
+#feedback-icon { font-size: 60px; margin-bottom: 15px; }
 .modal-content.correct #feedback-icon { color: var(--success); }
 .modal-content.correct h2 { color: var(--success); }
-
 .modal-content.wrong #feedback-icon { color: var(--error); }
 .modal-content.wrong h2 { color: var(--error); }
+#feedback-text { font-size: 1rem; margin-bottom: 20px; color: #636e72; line-height: 1.5; }
 
-#feedback-text {
-    font-size: 1rem;
-    margin-bottom: 20px;
-    color: #636e72;
-    line-height: 1.5;
-}
-
-/* --- MOBILE RESPONSIVE --- */
 @media screen and (max-width: 600px) {
-    .container {
-        padding: 1.5rem;
-        width: 95%;
-    }
+    .container { padding: 1.5rem; width: 95%; }
     h1 { font-size: 1.8rem; }
     .btn, .btn-category, .btn-answer { padding: 14px; }
-    .category-list { grid-template-columns: 1fr; } /* Mobile về 1 cột cho dễ bấm */
+    .category-list { grid-template-columns: 1fr; }
     .input-group input { font-size: 16px; }
 }
 
-/* --- HINT BUTTON --- */
 .btn-hint {
-    background: #f1c40f; /* Màu vàng */
-    color: #2d3436;
-    border: none;
-    padding: 8px 15px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 0.9rem;
-    transition: 0.3s;
-    box-shadow: 0 4px 0 #f39c12; /* Hiệu ứng nổi 3D */
+    background: #f1c40f; color: #2d3436; border: none; padding: 8px 15px; border-radius: 20px;
+    cursor: pointer; font-weight: bold; font-size: 0.9rem; transition: 0.3s; box-shadow: 0 4px 0 #f39c12;
 }
-
-.btn-hint:hover {
-    transform: translateY(-2px);
-}
-
-.btn-hint:active {
-    transform: translateY(2px);
-    box-shadow: none;
-}
-
-.btn-hint:disabled {
-    background: #b2bec3;
-    color: #636e72;
-    box-shadow: none;
-    cursor: not-allowed;
-    transform: none;
-}
-
-/* Hiệu ứng làm mờ đáp án sai khi dùng gợi ý */
-.btn-answer.hidden {
-    visibility: hidden; /* Ẩn đi nhưng vẫn giữ chỗ để không vỡ layout */
-    pointer-events: none;
-}
+.btn-hint:hover { transform: translateY(-2px); }
+.btn-hint:active { transform: translateY(2px); box-shadow: none; }
+.btn-hint:disabled { background: #b2bec3; color: #636e72; box-shadow: none; cursor: not-allowed; transform: none; }
+.btn-answer.hidden { visibility: hidden; pointer-events: none; display: none; } /* Ẩn hẳn luôn để nút thu gọn lên thay vì để lại khoảng trống */

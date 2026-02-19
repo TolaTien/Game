@@ -30,7 +30,7 @@
                     <i class="fas fa-gamepad"></i> Game
                 </button>
                 <button class="btn-category" onclick="startGame('celeb')">
-                    <i class="fas fa-star"></i> Người nổi tiếng
+                    <i class="fas fa-star"></i> Nổi tiếng
                 </button>
                 <button class="btn-category" onclick="startGame('math')">
                     <i class="fas fa-calculator"></i> Toán học
@@ -53,27 +53,42 @@
                 <button class="btn-category" onclick="startGame('tech')">
                     <i class="fas fa-laptop-code"></i> Công nghệ
                 </button>
+                <button class="btn-category" onclick="startGame('movies')">
+                    <i class="fas fa-film"></i> Điện ảnh
+                </button>
+                <button class="btn-category" onclick="startGame('anime')">
+                    <i class="fas fa-user-ninja"></i> Anime
+                </button>
             </div>
         </div>
-<div id="game-screen" class="screen">
-    <div class="header-game">
-        <span id="question-counter">Câu: 1/15</span>
-        <span id="score">Điểm: 0</span>
-    </div>
-    <div class="progress-bar">
-        <div id="progress" class="progress"></div>
-    </div>
-    
-    <div style="text-align: right; margin-bottom: 10px;">
-        <button id="btn-hint" class="btn-hint" onclick="useHint()">
-            <i class="fas fa-lightbulb"></i> Gợi ý (<span id="hint-count">3</span>)
-        </button>
-    </div>
 
-    <h2 id="question-text">Câu hỏi sẽ hiện ở đây?</h2>
-    <div class="answers-container" id="answers-container">
+        <div id="game-screen" class="screen">
+            <div class="header-game">
+                <span id="question-counter">Câu: 1/15</span>
+                <span id="score">Điểm: 0</span>
+            </div>
+            
+            <div class="timer-container">
+                <span id="timer-text">⏱ 02:00</span>
+                <div class="timer-bar-bg">
+                    <div id="timer-progress"></div>
+                </div>
+            </div>
+
+            <div class="progress-bar">
+                <div id="progress" class="progress"></div>
+            </div>
+            
+            <div style="text-align: right; margin-bottom: 10px;">
+                <button id="btn-hint" class="btn-hint" onclick="useHint()">
+                    <i class="fas fa-lightbulb"></i> Gợi ý (<span id="hint-count">3</span>)
+                </button>
+            </div>
+
+            <h2 id="question-text">Câu hỏi sẽ hiện ở đây?</h2>
+            <div class="answers-container" id="answers-container">
+            </div>
         </div>
-</div>
 
         <div id="result-screen" class="screen">
             <i class="fas fa-trophy" style="font-size: 50px; color: gold; margin-bottom: 20px;"></i>
@@ -96,13 +111,13 @@
             <div id="feedback-icon"></div>
             <h2 id="feedback-title">Tiêu đề</h2>
             <p id="feedback-text">Nội dung thông báo</p>
-            <button class="btn" onclick="closeFeedback()">Câu tiếp theo <i class="fas fa-arrow-right"></i></button>
+            <button class="btn" onclick="closeFeedback()">Tiếp tục <i class="fas fa-arrow-right"></i></button>
         </div>
     </div>
 
-    <audio id="bg-music" src="music.mp3" loop></audio> 
-    <audio id="sound-correct" src="sounds/correct.mp3"></audio>
-    <audio id="sound-wrong" src="sounds/wrong.mp3"></audio>
+    <audio id="bg-music" src="music1.mp3" loop></audio> 
+    <audio id="sound-correct" src="correct.mp3"></audio>
+    <audio id="sound-wrong" src="wrong.mp3"></audio>
 
     <script src="script.js"></script>
 </body>
